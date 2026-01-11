@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">MINDBLOOMANDROID</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    
+    <!-- Forum Sort Options -->
+    <string-array name="forum_sort_options">
+        <item>Latest</item>
+        <item>Most Liked</item>
+        <item>Most Commented</item>
+    </string-array>
 </resources>
+

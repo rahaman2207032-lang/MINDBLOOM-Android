@@ -2,4 +2,22 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="sober_color">#c98e8e</color>
+    <color name="role_text_color">#698a78</color>
+    <color name="go_back_color">#a15757</color>
+    <color name="primaryColor">#3A86FF</color>
+    <color name="primary_color">#3A86FF</color>
+    <color name="welcomeCard">#8338EC</color>
+
+    <color name="journalColor">#FFB703</color>
+    <color name="meditationColor">#8ECAE6</color>
+    <color name="sleepColor">#219EBC</color>
+    <color name="habitColor">#90DBA4</color>
+    <color name="stressColor">#FF6F61</color>
+    <color name="communityColor">#5E60CE</color>
+
+    <!-- Notification filter colors -->
+    <color name="filter_active">#3498db</color>
+    <color name="filter_inactive">#95a5a6</color>
+
 </resources>

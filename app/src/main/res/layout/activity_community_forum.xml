@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- App Bar with Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary_color"
+            app:titleTextColor="@android:color/white"
+            app:title="Community Forum" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- TabLayout -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabTextColor="#7F8C8D"
+        app:tabSelectedTextColor="@color/primary_color"
+        app:tabIndicatorColor="@color/primary_color"
+        app:tabIndicatorHeight="3dp" />
+
+    <!-- Tab Content Container -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Forum Posts Tab Content -->
+        <FrameLayout
+            android:id="@+id/forumPostsTab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Create Post Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Create New Post"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#2C3E50"
+                                android:layout_marginBottom="12dp" />
+
+                            <EditText
+                                android:id="@+id/postTitleField"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Post Title"
+                                android:textSize="14sp"
+                                android:padding="12dp"
+                                android:background="@drawable/edit_text_background"
+                                android:layout_marginBottom="8dp" />
+
+                            <EditText
+                                android:id="@+id/postContentArea"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:hint="Share your thoughts with the community..."
+                                android:textSize="14sp"
+                                android:padding="12dp"
+                                android:gravity="top"
+                                android:inputType="textMultiLine"
+                                android:background="@drawable/edit_text_background"
+                                android:layout_marginBottom="8dp" />
+
+                            <CheckBox
+                                android:id="@+id/anonymousCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Post anonymously"
+                                android:textSize="14sp"
+                                android:textColor="#7F8C8D"
+                                android:layout_marginBottom="8dp" />
+
+                            <Button
+                                android:id="@+id/createPostButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Create Post"
+                                android:textColor="@android:color/white"
+                                android:background="@drawable/button_background"
+                                android:backgroundTint="#27AE60"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Sort and Search Section -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sort By:"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:textColor="#2C3E50"
+                                android:layout_marginBottom="8dp" />
+
+                            <Spinner
+                                android:id="@+id/sortSpinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:background="@drawable/edit_text_background"
+                                android:padding="8dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Search Posts:"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:textColor="#2C3E50"
+                                android:layout_marginBottom="8dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/searchField"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="Search..."
+                                    android:textSize="14sp"
+                                    android:padding="12dp"
+                                    android:background="@drawable/edit_text_background"
+                                    android:layout_marginEnd="8dp" />
+
+                                <Button
+                                    android:id="@+id/searchButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Search"
+                                    android:textColor="@android:color/white"
+                                    android:background="@drawable/button_background"
+                                    android:backgroundTint="#3498DB"
+                                    android:layout_marginEnd="4dp" />
+
+                                <Button
+                                    android:id="@+id/clearSearchButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Clear"
+                                    android:textColor="@android:color/white"
+                                    android:background="@drawable/button_background"
+                                    android:backgroundTint="#95A5A6" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Posts List -->
+                    <ProgressBar
+                        android:id="@+id/postsProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/emptyPostsText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No posts yet. Be the first to share!"
+                        android:textSize="16sp"
+                        android:textColor="#95A5A6"
+                        android:textAlignment="center"
+                        android:padding="32dp"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/postsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </FrameLayout>
+
+        <!-- Group Chat Tab Content -->
+        <FrameLayout
+            android:id="@+id/groupChatTab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@android:color/white">
+
+                <!-- Online Users Label -->
+                <TextView
+                    android:id="@+id/onlineUsersLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="👥 0 users online"
+                    android:textSize="14sp"
+                    android:textColor="#7F8C8D"
+                    android:padding="12dp"
+                    android:background="#F8F9FA"
+                    android:gravity="center" />
+
+                <!-- Chat Messages RecyclerView -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/chatRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:clipToPadding="false" />
+
+                <!-- Message Input Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:background="#F8F9FA"
+                    android:elevation="4dp">
+
+                    <EditText
+                        android:id="@+id/chatMessageInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:hint="Type your message..."
+                        android:textSize="14sp"
+                        android:padding="12dp"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:background="@drawable/edit_text_background"
+                        android:layout_marginBottom="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <CheckBox
+                            android:id="@+id/chatAnonymousCheckBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Send anonymously"
+                            android:textSize="14sp"
+                            android:textColor="#7F8C8D" />
+
+                        <Button
+                            android:id="@+id/sendMessageButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Send"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/button_background"
+                            android:backgroundTint="#3498DB"
+                            android:paddingStart="24dp"
+                            android:paddingEnd="24dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
+
