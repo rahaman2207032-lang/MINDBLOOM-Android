@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Instructions -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rate each factor from 1 (Low) to 5 (High)"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Workload -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Workload Level"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="8dp" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <SeekBar
+                android:id="@+id/workloadSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="5"
+                android:min="1"
+                android:progress="3" />
+            
+            <TextView
+                android:id="@+id/workloadValue"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#7F9C96"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Sleep Quality -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Sleep Quality (1=Poor, 5=Excellent)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="12dp" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <SeekBar
+                android:id="@+id/sleepQualitySeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="5"
+                android:min="1"
+                android:progress="3" />
+            
+            <TextView
+                android:id="@+id/sleepQualityValue"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#7F9C96"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Anxiety -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. Anxiety Level"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="12dp" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <SeekBar
+                android:id="@+id/anxietySeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="5"
+                android:min="1"
+                android:progress="3" />
+            
+            <TextView
+                android:id="@+id/anxietyValue"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#7F9C96"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Mood -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. Mood Level (1=Low, 5=High)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="12dp" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <SeekBar
+                android:id="@+id/moodSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="5"
+                android:min="1"
+                android:progress="3" />
+            
+            <TextView
+                android:id="@+id/moodValue"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#7F9C96"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Physical Symptoms -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5. Physical Symptoms"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="12dp" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <SeekBar
+                android:id="@+id/physicalSymptomsSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="5"
+                android:min="1"
+                android:progress="3" />
+            
+            <TextView
+                android:id="@+id/physicalSymptomsValue"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#7F9C96"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Concentration -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6. Concentration Difficulty"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="12dp" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <SeekBar
+                android:id="@+id/concentrationSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="5"
+                android:min="1"
+                android:progress="3" />
+            
+            <TextView
+                android:id="@+id/concentrationValue"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#7F9C96"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Social Connection -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="7. Social Connection (1=Isolated, 5=Connected)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="12dp" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <SeekBar
+                android:id="@+id/socialConnectionSeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="5"
+                android:min="1"
+                android:progress="3" />
+            
+            <TextView
+                android:id="@+id/socialConnectionValue"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#7F9C96"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Results Section -->
+        <TextView
+            android:id="@+id/stressScoreLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stress Score: 21/35"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/stressLevelLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stress Level: Moderate"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFC107"
+            android:gravity="center"
+            android:layout_marginTop="4dp" />
+
+        <!-- Coping Suggestions -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Coping Suggestions:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/copingSuggestionsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="4dp" />
+
+        <!-- Notes -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Additional Notes (optional)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/notesEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minLines="2"
+                android:maxLines="4"
+                android:gravity="top" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+</ScrollView>

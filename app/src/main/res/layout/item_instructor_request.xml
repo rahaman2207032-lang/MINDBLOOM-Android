@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Client Name -->
+        <TextView
+            android:id="@+id/clientNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👤 John Doe"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2C3E50"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Date and Time -->
+        <TextView
+            android:id="@+id/dateTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📅 Jan 15, 2026 • 🕐 2:00 PM"
+            android:textSize="14sp"
+            android:textColor="#34495E"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Session Type -->
+        <TextView
+            android:id="@+id/sessionTypeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📝 Individual Therapy"
+            android:textSize="14sp"
+            android:textColor="#34495E"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Reason/Notes -->
+        <TextView
+            android:id="@+id/reasonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dealing with anxiety and stress"
+            android:textSize="13sp"
+            android:textColor="#7F8C8D"
+            android:fontFamily="serif"
+            android:textStyle="italic"
+            android:padding="8dp"
+            android:background="#F8F9FA"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Request Date -->
+        <TextView
+            android:id="@+id/requestDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Requested: Jan 10"
+            android:textSize="12sp"
+            android:textColor="#95A5A6"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Separator -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/declineButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Decline"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_background"
+                android:backgroundTint="#E74C3C"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/acceptButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✓ Accept"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_background"
+                android:backgroundTint="#27AE60"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header with icon and title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/notificationIconText"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="💬"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:id="@+id/notificationTitleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Notification Title"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#2c3e50" />
+        </LinearLayout>
+
+        <!-- Separator -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dfe6e9"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Message content -->
+        <TextView
+            android:id="@+id/notificationMessageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notification message content"
+            android:textSize="14sp"
+            android:textColor="#34495e"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Session details (for SESSION_ACCEPTED notifications) -->
+        <TextView
+            android:id="@+id/sessionDetailsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📅 Tomorrow at 10:00 AM\n👨‍⚕️ Dr. Smith"
+            android:textSize="12sp"
+            android:textColor="#7f8c8d"
+            android:background="#f1f3f4"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone" />
+
+        <!-- Join Meeting Button (for SESSION_ACCEPTED) -->
+        <Button
+            android:id="@+id/joinMeetingBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🎥 Join Meeting"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#27ae60"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <!-- Reply Button (for MESSAGE) -->
+        <Button
+            android:id="@+id/replyBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="💬 Reply to Sender"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#3498db"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <!-- Footer with timestamp and mark as read -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/notificationTimeText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🕒 2 hours ago"
+                android:textSize="12sp"
+                android:textColor="#7f8c8d" />
+
+            <Button
+                android:id="@+id/markReadBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Mark as Read"
+                android:textSize="11sp"
+                android:backgroundTint="#3498db"
+                android:textColor="@android:color/white"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

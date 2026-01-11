@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Instructions -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How are you feeling today?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Mood Radio Buttons -->
+        <RadioGroup
+            android:id="@+id/moodRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Very Low Mood -->
+            <RadioButton
+                android:id="@+id/mood1Radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="😢 Very Low"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Low Mood -->
+            <RadioButton
+                android:id="@+id/mood2Radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="😟 Low"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Neutral Mood -->
+            <RadioButton
+                android:id="@+id/mood3Radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="😐 Neutral"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp"
+                android:checked="true" />
+
+            <!-- Good Mood -->
+            <RadioButton
+                android:id="@+id/mood4Radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🙂 Good"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Very Good Mood -->
+            <RadioButton
+                android:id="@+id/mood5Radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="😊 Very Good"
+                android:textSize="18sp"
+                android:padding="12dp"
+                android:layout_marginBottom="8dp" />
+
+        </RadioGroup>
+
+        <!-- Activities Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Activities Today (optional)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/activitiesEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Notes Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Additional Notes (optional)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/notesEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minLines="2"
+                android:maxLines="4"
+                android:gravity="top" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+</ScrollView>

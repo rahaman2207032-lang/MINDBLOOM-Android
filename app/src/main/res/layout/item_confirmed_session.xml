@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Session Type Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/sessionTypeText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="✅ Individual Therapy"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#2C3E50" />
+
+            <TextView
+                android:id="@+id/statusBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONFIRMED"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@drawable/status_badge_background"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp" />
+
+        </LinearLayout>
+
+        <!-- Date and Time -->
+        <TextView
+            android:id="@+id/dateTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday, Jan 15, 2025 at 2:00 PM"
+            android:textSize="14sp"
+            android:textColor="#555"
+            android:layout_marginBottom="4dp"
+            android:drawableStart="@android:drawable/ic_menu_today"
+            android:drawablePadding="8dp" />
+
+        <!-- Instructor Name -->
+        <TextView
+            android:id="@+id/instructorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="with Dr. Sarah Johnson"
+            android:textSize="14sp"
+            android:textColor="#555"
+            android:layout_marginBottom="8dp"
+            android:drawableStart="@android:drawable/ic_menu_info_details"
+            android:drawablePadding="8dp" />
+
+        <!-- Notes (if any) -->
+        <TextView
+            android:id="@+id/notesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Follow-up session to discuss progress"
+            android:textSize="13sp"
+            android:textColor="#7F8C8D"
+            android:textStyle="italic"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone" />
+
+        <!-- Join Meeting Button -->
+        <Button
+            android:id="@+id/joinMeetingBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎥 Join Meeting"
+            android:backgroundTint="#27AE60"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
